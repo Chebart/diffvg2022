@@ -539,7 +539,7 @@ Vector4f sample_color(const SceneData &scene,
     auto pt = screen_pt;
     pt.x *= scene.canvas_width;
     pt.y *= scene.canvas_height;
-    constexpr auto max_hit_shapes = 2048;
+    constexpr auto max_hit_shapes = 256;
     constexpr auto max_bvh_stack_size = 64;
     Fragment fragments[max_hit_shapes];
     int bvh_stack[max_bvh_stack_size];
@@ -844,7 +844,7 @@ Vector4f sample_color_prefiltered(const SceneData &scene,
     auto pt = screen_pt;
     pt.x *= scene.canvas_width;
     pt.y *= scene.canvas_height;
-    constexpr auto max_hit_shapes = 256;
+    constexpr auto max_hit_shapes = 128;
     constexpr auto max_bvh_stack_size = 64;
     PrefilterFragment fragments[max_hit_shapes];
     int bvh_stack[max_bvh_stack_size];
